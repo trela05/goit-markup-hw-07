@@ -1,0 +1,95 @@
+.topper {
+	background-color: $main-white;
+	padding: 24px 0 25px;
+	border-bottom: 1px solid $border-color;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 93px;
+	}
+	&__nav-list {
+		display: flex;
+		list-style: none;
+		gap: 46px;
+		position: relative;
+	}
+	&__nav-list a:hover,
+	&__nav-list a:focus {
+		color: $main-blue;
+	}
+	&__nav-item {
+		color: $dark-grey;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.17;
+		letter-spacing: 0.02em;
+		text-align: left;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+		text-decoration: none;
+	}
+
+	&__nav-item--active {
+		color: $main-blue;
+	}
+
+	&__nav-item--active::after {
+		background-color: $main-blue;
+		content: "";
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		width: 53px;
+		height: 4px;
+		top: 49px;
+		border-radius: 2px;
+	}
+
+	&__nav-item:hover::after,
+	&__nav-item:focus::after {
+		background-color: $main-blue;
+		content: "";
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		width: 53px;
+		height: 4px;
+		top: 49px;
+		border-radius: 2px;
+	}
+
+	&__contact-list {
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.17;
+		letter-spacing: 0.02em;
+		text-align: left;
+		list-style: none;
+		display: flex;
+		column-gap: 50px;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__contact-item {
+		color: $main-grey;
+		text-decoration: none;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	&__contact-item:hover,
+	&__contact-item:focus {
+		color: $main-blue;
+	}
+
+	&__icon {
+		margin: 10px;
+		--color3: currentColor;
+		--color6: currentColor;
+	}
+}
